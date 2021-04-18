@@ -2,7 +2,7 @@ package com.github.omarmiatello.androidslf4jlogger
 
 import android.util.Log
 
-class AndroidLogger(
+public class AndroidLogger(
     levelMin: Int = Log.DEBUG,
     private val tag: String = AndroidLogger::class.java.simpleName,
 ) : BasicAndroidLogger(levelMin) {

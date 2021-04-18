@@ -57,7 +57,6 @@ tasks.dokkaJavadoc.configure {
 
 
 afterEvaluate {
-
     publishing {
         repositories {
             maven {
@@ -104,8 +103,9 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id.set("omarmiatello")
-                            name.set("Omar Miatello") // name + surname
+                            id.set("jackl85")
+                            name.set("Omar Miatello")
+                            email.set("omar.miatello@gmail.com")
                         }
                     }
                     scm {

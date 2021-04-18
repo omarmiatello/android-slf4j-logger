@@ -4,9 +4,9 @@ plugins {
     id("com.android.application") apply false
     id("com.android.library") apply false
     kotlin("android") apply false
-    id("io.gitlab.arturbosch.detekt") version Version.pluginDetekt
-    id("org.jlleitschuh.gradle.ktlint") version Version.pluginKtlint
-    id("com.github.ben-manes.versions") version Version.pluginBenManesVersions
+    id("io.gitlab.arturbosch.detekt") version "1.16.0"
+    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
+    id("com.github.ben-manes.versions") version "0.38.0"
 }
 
 allprojects {
@@ -27,7 +27,7 @@ subprojects {
 
     ktlint {
         debug.set(false)
-        version.set(Version.ktlint)
+        version.set("0.40.0")
         verbose.set(true)
         android.set(false)
         outputToConsole.set(true)
