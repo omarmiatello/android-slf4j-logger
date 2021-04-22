@@ -1,4 +1,5 @@
 version = "1.0.0"
+description = "Simple implementation of SLF4J Logger for Android"
 
 plugins {
     id("com.android.library")
@@ -45,5 +46,5 @@ android {
 }
 
 dependencies {
-    implementation("ch.qos.logback:logback-classic:1.2.3")
+    implementation(Lib.logbackClassic)
 }

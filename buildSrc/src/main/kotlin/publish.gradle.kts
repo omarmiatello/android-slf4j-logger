@@ -2,7 +2,7 @@ import com.android.build.gradle.LibraryExtension
 import org.gradle.api.tasks.bundling.Jar
 
 /**
- * Credits - Precompiled script plugin from:
+ * First version:
  * https://github.com/cortinico/kotlin-android-template/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts
  *
  * The following plugin tasks care of setting up:
@@ -55,7 +55,6 @@ tasks.dokkaJavadoc.configure {
     }
 }
 
-
 afterEvaluate {
     publishing {
         repositories {
@@ -91,8 +90,8 @@ afterEvaluate {
                     if (!"USE_SNAPSHOT".byProperty.isNullOrBlank()) {
                         version = "$version-SNAPSHOT"
                     }
-                    name.set("android-slf4j-logger")
-                    description.set("Simple implementation of SLF4J Logger for Android")
+                    name.set("android-slf4j-logger:$artifactId")
+                    description.set(project.description)
                     url.set("https://github.com/omarmiatello/android-slf4j-logger/")
 
                     licenses {
@@ -103,7 +102,7 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id.set("jackl85")
+                            id.set("omarmiatello")
                             name.set("Omar Miatello")
                             email.set("omar.miatello@gmail.com")
                         }
